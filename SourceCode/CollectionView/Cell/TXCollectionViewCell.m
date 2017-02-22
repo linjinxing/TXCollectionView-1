@@ -86,23 +86,39 @@
                                       _textLabel.frame.size.height);
     }else{
         _imageView.frame = UIEdgeInsetsInsetRect(self.bounds, self.contentInsets);
+        CGFloat selfHeight = self.frame.size.height;
+        CGFloat contentWidth = self.frame.size.width - self.contentInsets.left - self.contentInsets.right;
+        CGFloat textHeight = 0, textY = 0;
+        CGFloat detailHeight = 0, detailY = 0;
+        CGFloat (^calculateHeight)(UILabel*) = ^(UILabel* label){
+            [label sizeToFit];
+            return [label.text boundingRectWithSize:CGSizeMake(contentWidth, 999)
+                                            options:NSStringDrawingUsesFontLeading
+                                         attributes:@{NSFontAttributeName:label.font}
+                                            context:nil].size.height;
+        };
+        
         if (_textLabel && _detailTextLabel) {
-            [_textLabel sizeToFit];
-            [_detailTextLabel sizeToFit];
-            
-            CGFloat (^calculateHeight)(UILabel*) = ^(UILabel* label){
-                return [label sizeWithFont:label.font
-                                constrainedToSize:label.frame.size
-                                    lineBreakMode:NSLineBreakByWordWrapping].height;
-            };
-            CGSize labelSize = ;
-            
-            _textLabel.frame = CGRectMake(self.contentInsets, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+            textHeight = calculateHeight(_textLabel);
+            detailHeight = calculateHeight(_detailTextLabel);
+            textY = selfHeight - (textHeight + detailHeight + kDefaultSpace * 2 + self.contentInsets.bottom);
+            detailY = selfHeight - (detailHeight + kDefaultSpace + self.contentInsets.bottom);
         }else if (_textLabel){
-            
-        }else{
-            
+            textHeight = calculateHeight(_textLabel);
+            textY = selfHeight - (textHeight + kDefaultSpace + self.contentInsets.bottom);
+        }else if (_detailTextLabel){
+            detailHeight = calculateHeight(_detailTextLabel);
+            detailY = selfHeight - (detailHeight + kDefaultSpace + self.contentInsets.bottom);
         }
+        _textLabel.frame = CGRectMake(self.contentInsets.left,
+                                      textY,
+                                      contentWidth,
+                                      textHeight);
+        
+        _detailTextLabel.frame = CGRectMake(self.contentInsets.left,
+                                            detailY,
+                                            _detailTextLabel.frame.size.width,
+                                            detailHeight);
     }
 }
 
