@@ -1,25 +1,25 @@
 //
-//  TXDataSourceArrayItemPOD.m
+//  TXDataSourceItemPOD.m
 //  TXCollectionView
 //
 //  Created by linjinxing on 17/2/21.
 //  Copyright © 2017年 tongxing. All rights reserved.
 //
 
-#import "TXDataSourceArrayItemPOD.h"
+#import "TXDataSourceItemPOD.h"
 
-@interface TXDataSourceArrayItemPOD()
+@interface TXDataSourceItemPOD()
 @property(nonatomic, copy) NSString* text;
 @property(nonatomic, copy) NSString* detail;
 @property(nonatomic, strong) UIImage* image;
 @end
 
-@implementation TXDataSourceArrayItemPOD
+@implementation TXDataSourceItemPOD
 
 + (instancetype)podWithTitle:(NSString*)title
                       detail:(NSString*)detail
                        image:(UIImage*)image{
-    TXDataSourceArrayItemPOD* pod = [[self alloc] init];
+    TXDataSourceItemPOD* pod = [[self alloc] init];
     pod.text = title;
     pod.detail = detail;
     pod.image = image;

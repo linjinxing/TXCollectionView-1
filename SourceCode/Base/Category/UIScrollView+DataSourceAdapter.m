@@ -16,12 +16,12 @@ static const void *kDataSourceAdapterCacheKey = &kDataSourceAdapterCacheKey;
 @implementation UIScrollView (DataSourceAdapter)
 @dynamic dataSourceAdapter;
 
-- (id<TXDataSourceArrayItemDataSource>)dataSourceAdapter{
+- (id<TXDataSource>)dataSourceAdapter{
     return objc_getAssociatedObject(self, kDataSourceAdapterCacheKey);
 }
 
-- (void)setDataSourceAdapter:(id<TXDataSourceArrayItemDataSource>)dataSourceAdapter{
-    NSAssert([(NSObject*)dataSourceAdapter conformsToProtocol:@protocol(TXDataSourceArrayItemDataSource)], @"必须遵守TXDataSourceArrayItemDataSource协议");
+- (void)setDataSourceAdapter:(id<TXDataSource>)dataSourceAdapter{
+    NSAssert([(NSObject*)dataSourceAdapter conformsToProtocol:@protocol(TXDataSource)], @"必须遵守TXDataSource协议");
     if (dataSourceAdapter) {
         objc_setAssociatedObject(self, kDataSourceAdapterCacheKey, dataSourceAdapter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         if ([self isKindOfClass:[UICollectionView class]]) {

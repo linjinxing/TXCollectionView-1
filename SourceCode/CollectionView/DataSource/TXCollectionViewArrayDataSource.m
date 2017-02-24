@@ -11,8 +11,8 @@
 #import "TXDataSourceTypes.h"
 
 @interface TXCollectionViewArrayDataSource()
-@property (nonatomic, strong) NSArray<id<TXDataSourceArrayItem>>* items;
-//@property (nonatomic, strong) NSString* cellIdentifier;
+@property (nonatomic, strong) NSArray<id<TXDataSourceItem>>* items;
+@property (nonatomic, strong) id<TXDataSourceCellAdapter> cellIdentifier;
 @end
 
 @implementation TXCollectionViewArrayDataSource
@@ -24,7 +24,7 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     TXCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:TXDataSourceDefaultCellIdentifier forIndexPath:indexPath];
 //    cell.contentView.backgroundColor = [UIColor blueColor];
-    id<TXDataSourceArrayItem> item = self.items[indexPath.item];
+    id<TXDataSourceItem> item = self.items[indexPath.item];
     if ([item respondsToSelector:@selector(text)] && [item.text length]) {
         cell.textLabel.text = item.text;
     }else{
@@ -35,6 +35,8 @@
     }else{
         cell.detailTextLabel.text = nil;
     }
+    
+    cell.imageView.image = nil;
     if ([item respondsToSelector:@selector(image)] &&  item.image) {
         cell.imageView.image = item.image;
     }
@@ -44,11 +46,11 @@
     return cell;
 }
 
-+ (instancetype)dataSourceWithItems:(NSArray<id<TXDataSourceArrayItem>>*)items{
++ (instancetype)dataSourceWithItems:(NSArray<id<TXDataSourceItem>>*)items{
     return [self dataSourceWithItems:items identifier:nil];
 }
 
-+ (_Nullable instancetype)dataSourceWithItems:(NSArray<id<TXDataSourceArrayItem>>* _Nonnull)items identifier:(NSString* _Nullable)cellIdentifier{
++ (_Nullable instancetype)dataSourceWithItems:(NSArray<id<TXDataSourceItem>>* _Nonnull)items identifier:(NSString* _Nullable)cellIdentifier{
     TXCollectionViewArrayDataSource* ds = [[self alloc] init];
     ds.items = items;
 //    ds.cellIdentifier = cellIdentifier;

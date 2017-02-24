@@ -1,5 +1,5 @@
 //
-//  TXDataSourceArrayItemPOD.h
+//  TXDataSourceItemPOD.h
 //  TXCollectionView
 //
 //  Created by linjinxing on 17/2/21.
@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TXDataSourceArrayItem.h"
+#import "TXDataSourceTypes.h"
 
 
 
-@interface TXDataSourceArrayItemPOD : NSObject<TXDataSourceArrayItem>
+@interface TXDataSourceItemPOD : NSObject<TXDataSourceItem>
 + (instancetype)podWithTitle:(NSString*)title
                       detail:(NSString*)detail
                        image:(UIImage*)image;

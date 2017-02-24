@@ -36,10 +36,10 @@
                                                                       itemSize:CellSize];
     cv.backgroundColor = [UIColor purpleColor];
     [self.view addSubview:cv];
-    cv.dataSourceAdapter = [TXCollectionViewArrayDataSource dataSourceWithItems:@[[TXDataSourceArrayItemPOD new],
-                                                                                  [TXDataSourceArrayItemPOD new],
-                                                                                  [TXDataSourceArrayItemPOD new],
-                                                                                  [TXDataSourceArrayItemPOD new]]];
+    cv.dataSourceAdapter = [TXCollectionViewArrayDataSource dataSourceWithItems:@[[TXDataSourceItemPOD new],
+                                                                                  [TXDataSourceItemPOD new],
+                                                                                  [TXDataSourceItemPOD new],
+                                                                                  [TXDataSourceItemPOD new]]];
     // Do any additional setup after loading the view, typically from a nib.
     
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

@@ -4,7 +4,7 @@
 //
 //  Created by linjinxing on 17/2/21.
 //  Copyright © 2017年 tongxing. All rights reserved.
-//
+//  只有单行的CollectionView
 
 #import <UIKit/UIKit.h>
 

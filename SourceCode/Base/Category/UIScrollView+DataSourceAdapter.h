@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TXDataSourceArrayItem.h"
+#import "TXArrayDataSource.h"
 
 @interface UIScrollView (DataSourceAdapter)
 
@@ -19,7 +19,7 @@
  
  设置为空时，会移除之前的datasource
  */
-@property(nonatomic, strong) id<TXDataSourceArrayItemDataSource> dataSourceAdapter;
+@property(nonatomic, strong) id<TXDataSource> dataSourceAdapter;
 @end
 
 

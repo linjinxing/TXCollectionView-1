@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "TXDataSourceTypes.h"
-#import "TXDataSourceArrayItem.h"
-#import "TXDataSourceArrayItemPOD.h"
+#import "TXArrayDataSource.h"
+#import "TXDataSourceItemPOD.h"
 #import "UIScrollView+DataSourceAdapter.h"
 
 //#import "TXCollectionViewTypes.h"

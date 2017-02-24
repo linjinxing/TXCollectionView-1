@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "TXDataSourceArrayItem.h"
+#import "TXArrayDataSource.h"
 
 
 
 
-@interface TXCollectionViewArrayDataSource : NSObject<TXDataSourceArrayItemDataSource, UICollectionViewDataSource>
+@interface TXCollectionViewArrayDataSource : NSObject<TXArrayDataSource, UICollectionViewDataSource>
 @end
 
 

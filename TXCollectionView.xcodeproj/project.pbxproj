@@ -20,10 +20,10 @@
 		6849380E1E5C1E2F00F057E4 /* TXCollectionViewArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6849380B1E5C1E2F00F057E4 /* TXCollectionViewArrayDataSource.m */; };
 		6849381B1E5C1F1600F057E4 /* UIScrollView+DataSourceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 684938121E5C1F1600F057E4 /* UIScrollView+DataSourceAdapter.m */; };
 		6849381E1E5C1F1600F057E4 /* TXDataSourceTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6849381A1E5C1F1600F057E4 /* TXDataSourceTypes.m */; };
-		684938241E5C1F6100F057E4 /* TXDataSourceArrayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 684938211E5C1F6100F057E4 /* TXDataSourceArrayItem.m */; };
-		684938251E5C1F6100F057E4 /* TXDataSourceArrayItemPOD.m in Sources */ = {isa = PBXBuildFile; fileRef = 684938231E5C1F6100F057E4 /* TXDataSourceArrayItemPOD.m */; };
 		684938281E5C209700F057E4 /* TXSingleLineCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 684938271E5C209700F057E4 /* TXSingleLineCollectionView.m */; };
 		684938301E5C2B4D00F057E4 /* UICollectionView+Adapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6849382F1E5C2B4D00F057E4 /* UICollectionView+Adapter.m */; };
+		68FFC6471E5FC4A3009705BB /* TXDataSourceItemPOD.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFC6451E5FC4A3009705BB /* TXDataSourceItemPOD.m */; };
+		68FFC64A1E5FC56C009705BB /* TXArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFC6491E5FC56C009705BB /* TXArrayDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,14 +70,14 @@
 		684938121E5C1F1600F057E4 /* UIScrollView+DataSourceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+DataSourceAdapter.m"; sourceTree = "<group>"; };
 		684938191E5C1F1600F057E4 /* TXDataSourceTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXDataSourceTypes.h; sourceTree = "<group>"; };
 		6849381A1E5C1F1600F057E4 /* TXDataSourceTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXDataSourceTypes.m; sourceTree = "<group>"; };
-		684938201E5C1F6100F057E4 /* TXDataSourceArrayItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXDataSourceArrayItem.h; sourceTree = "<group>"; };
-		684938211E5C1F6100F057E4 /* TXDataSourceArrayItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXDataSourceArrayItem.m; sourceTree = "<group>"; };
-		684938221E5C1F6100F057E4 /* TXDataSourceArrayItemPOD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXDataSourceArrayItemPOD.h; sourceTree = "<group>"; };
-		684938231E5C1F6100F057E4 /* TXDataSourceArrayItemPOD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXDataSourceArrayItemPOD.m; sourceTree = "<group>"; };
 		684938261E5C209700F057E4 /* TXSingleLineCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXSingleLineCollectionView.h; sourceTree = "<group>"; };
 		684938271E5C209700F057E4 /* TXSingleLineCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXSingleLineCollectionView.m; sourceTree = "<group>"; };
 		6849382E1E5C2B4D00F057E4 /* UICollectionView+Adapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Adapter.h"; sourceTree = "<group>"; };
 		6849382F1E5C2B4D00F057E4 /* UICollectionView+Adapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Adapter.m"; sourceTree = "<group>"; };
+		68FFC6441E5FC4A3009705BB /* TXDataSourceItemPOD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXDataSourceItemPOD.h; sourceTree = "<group>"; };
+		68FFC6451E5FC4A3009705BB /* TXDataSourceItemPOD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXDataSourceItemPOD.m; sourceTree = "<group>"; };
+		68FFC6481E5FC56C009705BB /* TXArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXArrayDataSource.h; sourceTree = "<group>"; };
+		68FFC6491E5FC56C009705BB /* TXArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXArrayDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,7 +255,9 @@
 		684938131E5C1F1600F057E4 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				6849381F1E5C1F6100F057E4 /* Array */,
+				68FFC6401E5FC4A3009705BB /* Base */,
+				68FFC6431E5FC4A3009705BB /* POD */,
+				68FFC63F1E5FC4A3009705BB /* Array */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -269,17 +271,6 @@
 			path = Types;
 			sourceTree = "<group>";
 		};
-		6849381F1E5C1F6100F057E4 /* Array */ = {
-			isa = PBXGroup;
-			children = (
-				684938201E5C1F6100F057E4 /* TXDataSourceArrayItem.h */,
-				684938211E5C1F6100F057E4 /* TXDataSourceArrayItem.m */,
-				684938221E5C1F6100F057E4 /* TXDataSourceArrayItemPOD.h */,
-				684938231E5C1F6100F057E4 /* TXDataSourceArrayItemPOD.m */,
-			);
-			path = Array;
-			sourceTree = "<group>";
-		};
 		6849382D1E5C2B2400F057E4 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +278,31 @@
 				6849382F1E5C2B4D00F057E4 /* UICollectionView+Adapter.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		68FFC63F1E5FC4A3009705BB /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				68FFC6481E5FC56C009705BB /* TXArrayDataSource.h */,
+				68FFC6491E5FC56C009705BB /* TXArrayDataSource.m */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		68FFC6401E5FC4A3009705BB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		68FFC6431E5FC4A3009705BB /* POD */ = {
+			isa = PBXGroup;
+			children = (
+				68FFC6441E5FC4A3009705BB /* TXDataSourceItemPOD.h */,
+				68FFC6451E5FC4A3009705BB /* TXDataSourceItemPOD.m */,
+			);
+			path = POD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,10 +447,10 @@
 				684937F31E5C174000F057E4 /* TXDataSource.m in Sources */,
 				684938281E5C209700F057E4 /* TXSingleLineCollectionView.m in Sources */,
 				684937931E5AF74D00F057E4 /* main.m in Sources */,
+				68FFC64A1E5FC56C009705BB /* TXArrayDataSource.m in Sources */,
 				6849380E1E5C1E2F00F057E4 /* TXCollectionViewArrayDataSource.m in Sources */,
-				684938241E5C1F6100F057E4 /* TXDataSourceArrayItem.m in Sources */,
 				6849381B1E5C1F1600F057E4 /* UIScrollView+DataSourceAdapter.m in Sources */,
-				684938251E5C1F6100F057E4 /* TXDataSourceArrayItemPOD.m in Sources */,
+				68FFC6471E5FC4A3009705BB /* TXDataSourceItemPOD.m in Sources */,
 				684938301E5C2B4D00F057E4 /* UICollectionView+Adapter.m in Sources */,
 				6849380D1E5C1E2F00F057E4 /* TXCollectionViewCell.m in Sources */,
 			);
@@ -674,6 +690,7 @@
 				684937BD1E5AF74D00F057E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		684937BE1E5AF74D00F057E4 /* Build configuration list for PBXNativeTarget "TXCollectionViewTests" */ = {
 			isa = XCConfigurationList;
@@ -682,6 +699,7 @@
 				684937C01E5AF74D00F057E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		684937C11E5AF74D00F057E4 /* Build configuration list for PBXNativeTarget "TXCollectionViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -690,6 +708,7 @@
 				684937C31E5AF74D00F057E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
