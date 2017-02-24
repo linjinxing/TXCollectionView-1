@@ -12,6 +12,3 @@
 //
 //@end
 
-
-TXCVConstString TXDataSourceDefaultCellIdentifier = @"TXCollectionViewDefaultCellIdentifier";
-

@@ -7,6 +7,8 @@
 //
 
 #import "UICollectionView+Adapter.h"
+
+#import "TXDataSourceCellAdapter.h"
 #import "TXCollectionViewCell.h"
 #import "TXDataSourceTypes.h"
 

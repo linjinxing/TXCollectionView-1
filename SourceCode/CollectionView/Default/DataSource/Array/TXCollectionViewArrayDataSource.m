@@ -8,21 +8,25 @@
 
 #import "TXCollectionViewArrayDataSource.h"
 #import "TXCollectionViewCell.h"
+#import "TXDataSourceCellAdapter.h"
+#import "TXDataSourceCellAdapterPOD+CollectionView.h"
 #import "TXDataSourceTypes.h"
 
 @interface TXCollectionViewArrayDataSource()
 @property (nonatomic, strong) NSArray<id<TXDataSourceItem>>* items;
-@property (nonatomic, strong) id<TXDataSourceCellAdapter> cellIdentifier;
+@property (nonatomic, strong) id<TXDataSourceCellAdapter> cellAdapter;
 @end
 
 @implementation TXCollectionViewArrayDataSource
+
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.items.count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    TXCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:TXDataSourceDefaultCellIdentifier forIndexPath:indexPath];
+    TXCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.cellAdapter.identifier forIndexPath:indexPath];
 //    cell.contentView.backgroundColor = [UIColor blueColor];
     id<TXDataSourceItem> item = self.items[indexPath.item];
     if ([item respondsToSelector:@selector(text)] && [item.text length]) {
@@ -47,13 +51,14 @@
 }
 
 + (instancetype)dataSourceWithItems:(NSArray<id<TXDataSourceItem>>*)items{
-    return [self dataSourceWithItems:items identifier:nil];
+    return [self dataSourceWithItems:items
+                         cellAdapter:[TXDataSourceCellAdapterPOD podCollectionView]];
 }
 
-+ (_Nullable instancetype)dataSourceWithItems:(NSArray<id<TXDataSourceItem>>* _Nonnull)items identifier:(NSString* _Nullable)cellIdentifier{
++ (_Nullable instancetype)dataSourceWithItems:(NSArray<id<TXDataSourceItem>>* _Nonnull)items cellAdapter:(id<TXDataSourceCellAdapter> _Nonnull)cellAdapter{
     TXCollectionViewArrayDataSource* ds = [[self alloc] init];
     ds.items = items;
-//    ds.cellIdentifier = cellIdentifier;
+    ds.cellAdapter = cellAdapter;
     return ds;
 }
 

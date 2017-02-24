@@ -13,7 +13,7 @@
 
 
 
-@interface TXCollectionViewArrayDataSource : NSObject<TXArrayDataSource, UICollectionViewDataSource>
+@interface TXCollectionViewArrayDataSource : NSObject<TXArrayDefaultDataSource, UICollectionViewDataSource>
 @end
 
 

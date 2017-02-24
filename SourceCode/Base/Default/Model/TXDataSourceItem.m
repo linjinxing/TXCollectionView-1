@@ -1,12 +1,13 @@
 //
-//  TXDataSourceItemPOD.m
+//  TXDataSourceItem.m
 //  TXCollectionView
 //
-//  Created by linjinxing on 17/2/21.
+//  Created by linjinxing on 17/2/24.
 //  Copyright © 2017年 tongxing. All rights reserved.
 //
 
-#import "TXDataSourceItemPOD.h"
+#import "TXDataSourceItem.h"
+
 
 @interface TXDataSourceItemPOD()
 @property(nonatomic, copy) NSString* text;
@@ -38,3 +39,8 @@
 //#endif
 
 @end
+
+
+
+
+

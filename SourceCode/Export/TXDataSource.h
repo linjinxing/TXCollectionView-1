@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "TXDataSourceTypes.h"
 #import "TXArrayDataSource.h"
-#import "TXDataSourceItemPOD.h"
+#import "TXDataSourceItem.h"
 #import "UIScrollView+DataSourceAdapter.h"
 
 //#import "TXCollectionViewTypes.h"
