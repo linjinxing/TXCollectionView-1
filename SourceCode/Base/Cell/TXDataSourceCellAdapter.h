@@ -27,9 +27,9 @@ FOUNDATION_EXTERN _Nonnull TXCVConstString TXDataSourceDefaultCellIdentifier;
 
 
 @interface TXDataSourceCellAdapterPOD : NSObject<TXDataSourceCellAdapter>
-+ (instancetype) podWithStyle:(NSInteger)style
++ (_Nonnull instancetype) podWithStyle:(NSInteger)style
                           cls:(Class _Nonnull)cls;
-+ (instancetype) podWithStyle:(NSInteger)style
++ (_Nonnull instancetype) podWithStyle:(NSInteger)style
                           cls:(Class _Nonnull)cls
                    identifier:(NSString* _Nonnull)identifier;
 @end

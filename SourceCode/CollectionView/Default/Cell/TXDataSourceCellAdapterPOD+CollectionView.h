@@ -17,4 +17,6 @@
  @return <#return value description#>
  */
 + (instancetype) podCollectionView;
++ (instancetype) podCollectionViewWithStyle:(NSInteger)style;
++ (instancetype) podWithClass:(Class _Nonnull)cls;
 @end

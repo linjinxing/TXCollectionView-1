@@ -21,12 +21,13 @@
 		684938281E5C209700F057E4 /* TXSingleLineCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 684938271E5C209700F057E4 /* TXSingleLineCollectionView.m */; };
 		684938301E5C2B4D00F057E4 /* UICollectionView+Adapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6849382F1E5C2B4D00F057E4 /* UICollectionView+Adapter.m */; };
 		68FFC65D1E5FD8F4009705BB /* TXCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFC6581E5FD8F4009705BB /* TXCollectionViewCell.m */; };
-		68FFC65E1E5FD8F4009705BB /* TXCollectionViewArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFC65C1E5FD8F4009705BB /* TXCollectionViewArrayDataSource.m */; };
-		68FFC6621E5FDA99009705BB /* TXDataSourceCellAdapterPOD+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFC6611E5FDA99009705BB /* TXDataSourceCellAdapterPOD+CollectionView.m */; };
 		68FFC6671E5FDB0D009705BB /* TXDataSourceCellAdapterPOD+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFC6661E5FDB0D009705BB /* TXDataSourceCellAdapterPOD+TableView.m */; };
 		68FFC6761E5FE218009705BB /* TXArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFC66E1E5FE218009705BB /* TXArrayDataSource.m */; };
 		68FFC67C1E5FE29C009705BB /* TXDataSourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFC67B1E5FE29C009705BB /* TXDataSourceItem.m */; };
 		68FFC6801E5FE410009705BB /* TXDataSourceCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFC67F1E5FE410009705BB /* TXDataSourceCellAdapter.m */; };
+		68FFC6831E600404009705BB /* TXDataSourceCellAdapterPOD+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFC6821E600404009705BB /* TXDataSourceCellAdapterPOD+CollectionView.m */; };
+		68FFC6861E6008D9009705BB /* TXCollectionViewArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFC6851E6008D9009705BB /* TXCollectionViewArrayDataSource.m */; };
+		68FFC6891E600ED8009705BB /* TXMyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFC6881E600ED8009705BB /* TXMyCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,10 +76,6 @@
 		6849382F1E5C2B4D00F057E4 /* UICollectionView+Adapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Adapter.m"; sourceTree = "<group>"; };
 		68FFC6571E5FD8F4009705BB /* TXCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXCollectionViewCell.h; sourceTree = "<group>"; };
 		68FFC6581E5FD8F4009705BB /* TXCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXCollectionViewCell.m; sourceTree = "<group>"; };
-		68FFC65B1E5FD8F4009705BB /* TXCollectionViewArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXCollectionViewArrayDataSource.h; sourceTree = "<group>"; };
-		68FFC65C1E5FD8F4009705BB /* TXCollectionViewArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXCollectionViewArrayDataSource.m; sourceTree = "<group>"; };
-		68FFC6601E5FDA99009705BB /* TXDataSourceCellAdapterPOD+CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TXDataSourceCellAdapterPOD+CollectionView.h"; sourceTree = "<group>"; };
-		68FFC6611E5FDA99009705BB /* TXDataSourceCellAdapterPOD+CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TXDataSourceCellAdapterPOD+CollectionView.m"; sourceTree = "<group>"; };
 		68FFC6651E5FDB0D009705BB /* TXDataSourceCellAdapterPOD+TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TXDataSourceCellAdapterPOD+TableView.h"; sourceTree = "<group>"; };
 		68FFC6661E5FDB0D009705BB /* TXDataSourceCellAdapterPOD+TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TXDataSourceCellAdapterPOD+TableView.m"; sourceTree = "<group>"; };
 		68FFC66D1E5FE218009705BB /* TXArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXArrayDataSource.h; sourceTree = "<group>"; };
@@ -87,6 +84,12 @@
 		68FFC67B1E5FE29C009705BB /* TXDataSourceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXDataSourceItem.m; sourceTree = "<group>"; };
 		68FFC67E1E5FE410009705BB /* TXDataSourceCellAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXDataSourceCellAdapter.h; sourceTree = "<group>"; };
 		68FFC67F1E5FE410009705BB /* TXDataSourceCellAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXDataSourceCellAdapter.m; sourceTree = "<group>"; };
+		68FFC6811E600404009705BB /* TXDataSourceCellAdapterPOD+CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TXDataSourceCellAdapterPOD+CollectionView.h"; sourceTree = "<group>"; };
+		68FFC6821E600404009705BB /* TXDataSourceCellAdapterPOD+CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TXDataSourceCellAdapterPOD+CollectionView.m"; sourceTree = "<group>"; };
+		68FFC6841E6008D9009705BB /* TXCollectionViewArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXCollectionViewArrayDataSource.h; sourceTree = "<group>"; };
+		68FFC6851E6008D9009705BB /* TXCollectionViewArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXCollectionViewArrayDataSource.m; sourceTree = "<group>"; };
+		68FFC6871E600ED8009705BB /* TXMyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXMyCollectionViewCell.h; sourceTree = "<group>"; };
+		68FFC6881E600ED8009705BB /* TXMyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXMyCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				684937951E5AF74D00F057E4 /* AppDelegate.m */,
 				684937971E5AF74D00F057E4 /* ViewController.h */,
 				684937981E5AF74D00F057E4 /* ViewController.m */,
+				68FFC6871E600ED8009705BB /* TXMyCollectionViewCell.h */,
+				68FFC6881E600ED8009705BB /* TXMyCollectionViewCell.m */,
 				6849379A1E5AF74D00F057E4 /* Main.storyboard */,
 				6849379D1E5AF74D00F057E4 /* Assets.xcassets */,
 				6849379F1E5AF74D00F057E4 /* LaunchScreen.storyboard */,
@@ -277,6 +282,8 @@
 			children = (
 				68FFC6571E5FD8F4009705BB /* TXCollectionViewCell.h */,
 				68FFC6581E5FD8F4009705BB /* TXCollectionViewCell.m */,
+				68FFC6811E600404009705BB /* TXDataSourceCellAdapterPOD+CollectionView.h */,
+				68FFC6821E600404009705BB /* TXDataSourceCellAdapterPOD+CollectionView.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -284,25 +291,15 @@
 		68FFC6591E5FD8F4009705BB /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				68FFC65A1E5FD8F4009705BB /* Array */,
+				68FFC6841E6008D9009705BB /* TXCollectionViewArrayDataSource.h */,
+				68FFC6851E6008D9009705BB /* TXCollectionViewArrayDataSource.m */,
 			);
 			path = DataSource;
-			sourceTree = "<group>";
-		};
-		68FFC65A1E5FD8F4009705BB /* Array */ = {
-			isa = PBXGroup;
-			children = (
-				68FFC65B1E5FD8F4009705BB /* TXCollectionViewArrayDataSource.h */,
-				68FFC65C1E5FD8F4009705BB /* TXCollectionViewArrayDataSource.m */,
-			);
-			path = Array;
 			sourceTree = "<group>";
 		};
 		68FFC65F1E5FDA6B009705BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				68FFC6601E5FDA99009705BB /* TXDataSourceCellAdapterPOD+CollectionView.h */,
-				68FFC6611E5FDA99009705BB /* TXDataSourceCellAdapterPOD+CollectionView.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -507,15 +504,16 @@
 				68FFC65D1E5FD8F4009705BB /* TXCollectionViewCell.m in Sources */,
 				684937991E5AF74D00F057E4 /* ViewController.m in Sources */,
 				68FFC6801E5FE410009705BB /* TXDataSourceCellAdapter.m in Sources */,
-				68FFC65E1E5FD8F4009705BB /* TXCollectionViewArrayDataSource.m in Sources */,
+				68FFC6831E600404009705BB /* TXDataSourceCellAdapterPOD+CollectionView.m in Sources */,
 				6849381E1E5C1F1600F057E4 /* TXDataSourceTypes.m in Sources */,
 				684937961E5AF74D00F057E4 /* AppDelegate.m in Sources */,
-				68FFC6621E5FDA99009705BB /* TXDataSourceCellAdapterPOD+CollectionView.m in Sources */,
 				684937F31E5C174000F057E4 /* TXDataSource.m in Sources */,
 				684938281E5C209700F057E4 /* TXSingleLineCollectionView.m in Sources */,
 				68FFC67C1E5FE29C009705BB /* TXDataSourceItem.m in Sources */,
 				68FFC6761E5FE218009705BB /* TXArrayDataSource.m in Sources */,
+				68FFC6861E6008D9009705BB /* TXCollectionViewArrayDataSource.m in Sources */,
 				68FFC6671E5FDB0D009705BB /* TXDataSourceCellAdapterPOD+TableView.m in Sources */,
+				68FFC6891E600ED8009705BB /* TXMyCollectionViewCell.m in Sources */,
 				684937931E5AF74D00F057E4 /* main.m in Sources */,
 				6849381B1E5C1F1600F057E4 /* UIScrollView+DataSourceAdapter.m in Sources */,
 				684938301E5C2B4D00F057E4 /* UICollectionView+Adapter.m in Sources */,

@@ -28,9 +28,9 @@
 }
 
 //#ifdef DEBUG
-- (NSString*)text{
-    return self.text;
-}
+//- (NSString*)text{
+//    return self.text;
+//}
 //
 //- (UIImage*)image
 //{

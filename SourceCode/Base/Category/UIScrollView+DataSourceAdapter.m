@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import "TXCollectionViewCell.h"
 #import "TXDataSourceTypes.h"
+#import "TXArrayDataSource.h"
 
 static const void *kDataSourceAdapterCacheKey = &kDataSourceAdapterCacheKey;
 
@@ -26,7 +27,12 @@ static const void *kDataSourceAdapterCacheKey = &kDataSourceAdapterCacheKey;
         objc_setAssociatedObject(self, kDataSourceAdapterCacheKey, dataSourceAdapter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         if ([self isKindOfClass:[UICollectionView class]]) {
         NSAssert([(NSObject*)dataSourceAdapter conformsToProtocol:@protocol(UICollectionViewDataSource)], @"必须遵守UICollectionViewDataSource协议");
-            ((UICollectionView*)self).dataSource = (id<UICollectionViewDataSource>)dataSourceAdapter;
+            UICollectionView* collectionView = (UICollectionView*)self;
+            collectionView.dataSource = (id<UICollectionViewDataSource>)dataSourceAdapter;
+            if ([dataSourceAdapter conformsToProtocol:@protocol(TXArrayDefaultDataSource)]) {
+                id<TXArrayDefaultDataSource> ds = (id<TXArrayDefaultDataSource>)dataSourceAdapter;
+                [collectionView registerClass:ds.cellAdapter.cls forCellWithReuseIdentifier:ds.cellAdapter.identifier];
+            }
         }
         if ([self isKindOfClass:[UITableView class]]) {
         NSAssert([(NSObject*)dataSourceAdapter conformsToProtocol:@protocol(UITableViewDataSource)], @"必须遵守UITableViewDataSource协议");

@@ -16,4 +16,10 @@
                           cls:[TXCollectionViewCell class]
                    identifier:TXDataSourceDefaultCellIdentifier];
 }
+
++ (instancetype) podCollectionViewWithStyle:(NSInteger)style{
+    return [self podWithStyle:style
+                          cls:[TXCollectionViewCell class]
+                   identifier:TXDataSourceDefaultCellIdentifier];
+}
 @end

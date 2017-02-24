@@ -27,6 +27,7 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     TXCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.cellAdapter.identifier forIndexPath:indexPath];
+    cell.style = self.cellAdapter.style;
 //    cell.contentView.backgroundColor = [UIColor blueColor];
     id<TXDataSourceItem> item = self.items[indexPath.item];
     if ([item respondsToSelector:@selector(text)] && [item.text length]) {

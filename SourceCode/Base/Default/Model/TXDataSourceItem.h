@@ -25,7 +25,7 @@
 
 
 @interface TXDataSourceItemPOD : NSObject<TXDataSourceItem>
-+ (instancetype)podWithTitle:(NSString* _Nullable)title
++ (_Nonnull instancetype)podWithTitle:(NSString* _Nullable)title
                       detail:(NSString* _Nullable)detail
                        image:(UIImage* _Nullable)image;
 @end
